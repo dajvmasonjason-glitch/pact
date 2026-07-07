@@ -1,4 +1,4 @@
-# PACT: Preserving Anchored Cores in Task-vectors for Model Merging
+# [PACT: Preserving Anchored Cores in Task-vectors for Model Merging](https://arxiv.org/pdf/2606.18627)
 
 ![PACT Overview](08c18153b3772650c90df4f35130f1d1.jpg)
 
