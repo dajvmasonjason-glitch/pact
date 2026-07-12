@@ -282,42 +282,42 @@ def create_task_vector(
     elif config.method.name == "pact_isoc":
         print(f"=== Using PACT-ISOC ===")
         # 创建预训练模型向量
-        pretrained_vector = NonLinearTaskVector(config.model, ptm_check, ptm_check)
+        pretrained_vector = NonLinearTaskVector(model_name=config.model, vector=dict(ptm_check))
         new_merged_tv = pact_isoc_merge(task_vectors, pretrained_vector, config)
     elif config.method.name == "pact_ta":
         print(f"=== Using PACT-TA ===")
         # 创建预训练模型向量
-        pretrained_vector = NonLinearTaskVector(config.model, ptm_check, ptm_check)
+        pretrained_vector = NonLinearTaskVector(model_name=config.model, vector=dict(ptm_check))
         new_merged_tv = pact_ta_merge(task_vectors, pretrained_vector, config)
     elif config.method.name == "pact_isocts":
         print(f"=== Using PACT-ISOCTS ===")
         # 创建预训练模型向量
-        pretrained_vector = NonLinearTaskVector(config.model, ptm_check, ptm_check)
+        pretrained_vector = NonLinearTaskVector(model_name=config.model, vector=dict(ptm_check))
         new_merged_tv = pact_isocts_merge(task_vectors, pretrained_vector, config)
     elif config.method.name == "pact_tsvm":
         print(f"=== Using PACT-TSVM ===")
         # 创建预训练模型向量
-        pretrained_vector = NonLinearTaskVector(config.model, ptm_check, ptm_check)
+        pretrained_vector = NonLinearTaskVector(model_name=config.model, vector=dict(ptm_check))
         new_merged_tv = pact_tsvm_merge(task_vectors, pretrained_vector, config)
     elif config.method.name == "pact_tsvm_rsvd":
         print(f"=== Using PACT-TSVM-RSVD (Randomized SVD in both PACT and TSVM stages) ===")
-        pretrained_vector = NonLinearTaskVector(config.model, ptm_check, ptm_check)
+        pretrained_vector = NonLinearTaskVector(model_name=config.model, vector=dict(ptm_check))
         new_merged_tv = pact_tsvm_randsvd_merge(task_vectors, pretrained_vector, config)
     elif config.method.name == "pact_isoc_rsvd":
         print(f"=== Using PACT-ISOC-RSVD (simplified, random SVD + NS iteration) ===")
-        pretrained_vector = NonLinearTaskVector(config.model, ptm_check, ptm_check)
+        pretrained_vector = NonLinearTaskVector(model_name=config.model, vector=dict(ptm_check))
         new_merged_tv = pact_isoc_randsvd_merge(task_vectors, pretrained_vector, config)
     elif config.method.name == "pact_ta_rsvd":
         print(f"=== Using PACT-TA-RSVD (simplified, random SVD) ===")
-        pretrained_vector = NonLinearTaskVector(config.model, ptm_check, ptm_check)
+        pretrained_vector = NonLinearTaskVector(model_name=config.model, vector=dict(ptm_check))
         new_merged_tv = pact_ta_randsvd_merge(task_vectors, pretrained_vector, config)
     elif config.method.name == "sift_ta":
         print(f"=== Using SIFT-TA ===")
-        pretrained_vector = NonLinearTaskVector(config.model, ptm_check, ptm_check)
+        pretrained_vector = NonLinearTaskVector(model_name=config.model, vector=dict(ptm_check))
         new_merged_tv = sift_ta_merge(task_vectors, pretrained_vector, config)
     elif config.method.name == "sift_isoc":
         print(f"=== Using SIFT-ISOC ===")
-        pretrained_vector = NonLinearTaskVector(config.model, ptm_check, ptm_check)
+        pretrained_vector = NonLinearTaskVector(model_name=config.model, vector=dict(ptm_check))
         new_merged_tv = sift_isoc_merge(task_vectors, pretrained_vector, config)
     else:
         raise ValueError(f"Method {config.method.name} not defined.")
